@@ -6,36 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Oswald:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
+<body class="blog">
     <!-- header -->
     <header class="blogHeader">
-        <div class="wrapper">
-            <nav class="headerNav">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><h2>Harper</h2></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        <nav class="headerNav">
+            <ul>
+                <li class="hide"><a href="../index.html">Home</a></li>
+                <li class="hide"><a href="#">About</a></li>
+                <li><h2>Harper</h2></li>
+                <li class="hide"><a href="blog.html">Blog</a></li>
+                <li class="hide"><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="mobileNav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="blogWrapper">
             <h1>Blog</h1>
         </div>
     </header>
     <!-- main -->
     <main>
-        <div class="wrapper">
-            <div class="blogFlexContainer">
+        <div class="blogWrapper">
+            <div class="blogPageFlexContainer">
                 <section class="aboutRecent">
                     <div class="about">
                         <div class="aboutImg">
                             <img src="../assets/blog-image-2.jpg" alt="a person with a pink fur coat on laying on the carpet beside a turquoise wall">
                         </div>
                         <div class="aboutText">
-                            <h4>About Harper</h4>
+                            <h4><a href="#" class="blogAboutLink">About Harper</a></h4>
                             <p>Nam dapibus nisl vitae elit fringilla rutrum.  Aenean sollicitudin, erat a elementum.  Find out more.</p>
                         </div>
                     </div>
@@ -78,14 +84,14 @@
                             <p>Donec viverra eleifend lacus, vitae ullamcorper metus.  Sed sollicitudin ipsum quis nunc sollicitudin ultrices.  Donec euismod scelerisque ligula.  Maecenas eu varius risus, eu aliquet arcu.</p>
                         </div>
                     </div>
-                    <div class="entryForm">
-                        <form>
-                            <label for="name">Name</label>
+                    <div class="formContainer">
+                        <form class="entryForm">
+                            <label for="name" class="visually-hidden">Name</label>
                             <input type="text" id="name" name="name" placeholder="Name">
-                            <label for="email">Email address</label>
+                            <label for="email" class="visually-hidden">Email address</label>
                             <input type="email" id="email" name="email" placeholder="Email address">
-                            <label for="comment">Comment</label>
-                            <input type="text" id="comment" name="comment" placeholder="Comment">
+                            <label for="comment" class="visually-hidden">Comment</label>
+                            <textarea id="blogComment" name="blogComment" rows="10" placeholder="Comment"></textarea>
                             <button class="longButton">Post Comment</button>
                         </form>
                     </div>

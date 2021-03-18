@@ -6,29 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Oswald:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Oswald:wght@400;600&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../styles/style.css">
     <script src="https://kit.fontawesome.com/62dab4b2f8.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="contact">
+    <!-- header -->
     <header class="contactHeader">
-        <div class="wrapper">
-            <nav class="headerNav">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><h2>Harper</h2></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+        <nav class="headerNav">
+            <ul>
+                <li class="hide"><a href="../index.html">Home</a></li>
+                <li class="hide"><a href="#">About</a></li>
+                <li><h2>Harper</h2></li>
+                <li class="hide"><a href="blog.html">Blog</a></li>
+                <li class="hide"><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="mobileNav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="contactWrapper">
             <h1>Contact Me</h1>
         </div>
     </header>
     <main>
-        <div class="wrapper">
+        <div class="contactWrapper">
             <div class="contactFlexContainer">
-                <section class="contactInfo">
+                <!-- contact info sidebar section -->
+                <div class="contactInfo">
                     <nav class="socialNav">
                         <ul>
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -37,19 +45,22 @@
                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                         </ul>
                     </nav>
-                    <a href="#" class="emailLink">info@email.com</a>
-                    <p>123 - 456 - 7890</p>
-                    <p>123 Queen Street West, Unit 10</p>
-                    <p>Toronto, Ontario</p>
-                    <p>M5V2D5</p>
-                </section>
-                <form>
-                    <label for="name">Name</label>
+                    <div class="contactText">
+                        <a href="#" class="emailLink"><h4>info@email.com</h4></a>
+                        <p>123 - 456 - 7890</p>
+                        <p>123 Queen Street West, Unit 10</p>
+                        <p>Toronto, Ontario</p>
+                        <p>M5V2D5</p>
+                    </div>
+                </div>
+                <!-- contact me form -->
+                <form class="contactForm">
+                    <label for="name" class="visually-hidden">Name</label>
                     <input type="text" id="name" name="name" placeholder="Name">
-                    <label for="email">Email address</label>
+                    <label for="email" class="visually-hidden">Email address</label>
                     <input type="email" id="email" name="email" placeholder="Email address">
-                    <label for="contactComment">Comment</label>
-                    <input type="text" id="contactComment" name="contactComment" placeholder="Comment">
+                    <label for="contactComment" class="visually-hidden">Message</label>
+                    <textarea id="contactMessage" name="contactMessage" rows="10" placeholder="Message"></textarea>
                     <button class="longButton">Submit</button>
                 </form>
             </div>
@@ -57,7 +68,9 @@
     </main>
     <!-- footer -->
     <footer>
-        <p>Copyright © 2021 Juno College</p>
+        <div class="wrapper">
+            <p>Copyright © 2021 Juno College</p>
+        </div>
     </footer>
 </body>
 </html>

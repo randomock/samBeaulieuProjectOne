@@ -1,0 +1,242 @@
+// blog header styles
+.blogWrapper {
+    max-width: 1400px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.blogHeader {
+    height: 60vh;
+    background-image: url(../assets/blog-image-1.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.blog a[href="blog.html"] {
+    color: $white;
+}
+
+.mobileNav {
+    padding-top: 0.5rem;
+    visibility: hidden;
+    display: none;
+    height: 1px;
+    width: 1px;
+}
+
+.blogHeader h1 {
+    position: absolute;
+    bottom: -2rem;
+}
+
+// main styles
+main {
+    background: $primary4;
+}
+
+.blogPageFlexContainer {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutRecent {
+    margin-right: 1rem;
+    width: calc(30% - 1rem);
+}
+
+.about {
+    background: $white;
+    padding: 2rem;
+}
+
+.about h4 {
+    margin: 1rem 0;
+}
+
+.recent {
+    background: $white;
+    margin: 1rem 0 0 0;
+    padding: 2rem;
+}
+
+.recent ul {
+    padding-left: 1.5rem;
+}
+
+.blogPosts {
+    width: calc(70% - 1rem);
+}
+
+.entryOne,
+.entryThree {
+    border-bottom: 0.25rem solid $primary1;
+}
+
+.blogPostEntry {
+    background: $white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blogPostEntry h3 {
+    margin-bottom: 1rem;
+}
+
+.entryOne p {
+    margin-bottom: 1rem;
+}
+
+.entryTwo,
+.entryThree {
+    display: flex;
+}
+
+.entryImgContainer {
+    margin-right: 1rem;
+    width: calc(15% - 1rem);
+    flex: 1 0 auto;
+}
+
+.entryText {
+    width: calc(85% - 1rem);
+    flex: 0 1 auto;
+}
+
+.entryText p {
+    margin: 0.5rem 0 0 0;
+}
+
+.entryForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input[name="name"],
+input[name="email"] {
+    width: calc(50% - 0.25rem);
+    height: 3rem;
+}
+
+textarea[name="blogComment"] {
+    border: none;
+    width: 100%;
+    margin: 1rem 0;
+    resize: none;
+    overflow: hidden;
+    padding: 1rem 0 0 1rem;
+}
+
+.blogButton {
+    margin-bottom: 4rem;
+}
+
+// I used this technique from bootcamp notes (https://github.com/HackerYou/bootcamp-notes/blob/master/css/forms.md#the-label-element) to hide labels...
+// Note:  Will also apply to labels in form on Contact page...
+.visually-hidden { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+// blog page media queries
+@media (max-width: 940px) {
+    .blogWrapper {
+        max-width: 940px;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .blogPageFlexContainer {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .aboutRecent {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .about {
+        width: calc(50% - 0.5rem);
+        display: flex;
+        margin-right: 0.5rem;
+    }
+
+    .aboutImg {
+        display: none;
+    }
+
+    .recent {
+        width: calc(50% - 0.5rem);
+        margin-top: 0;
+    }
+
+    .blogPosts {
+        width: 100%;
+    }
+
+    .entryImgContainer {
+        align-self: center;
+        margin-right: 1rem;
+        width: calc(30% - 1rem);
+    }
+
+    .entryText {
+        width: calc(70% - 1rem);
+    }
+}
+
+@media (max-width: 675px) {
+    .blogWrapper {
+        max-width: 675px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .aboutRecent {
+        flex-direction: column;
+    }
+
+    .about,
+    .recent {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about {
+        margin-bottom: 1rem;
+    }
+
+    .entryForm input[name="name"],
+    .entryForm input[name="email"] {
+    width: 100%;
+    height: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hide {
+        visibility: hidden;
+    }
+
+    .entryTwo,
+    .entryThree {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .entryImgContainer {
+        width: 70%;
+    }
+}

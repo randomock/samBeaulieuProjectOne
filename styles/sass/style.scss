@@ -1,0 +1,78 @@
+@import 'setup';
+@import 'fonts';
+@import 'home';
+@import 'blog';
+@import 'contact';
+
+// general styles
+html {
+    font-size: 125%;
+    margin: 0;
+    padding: 0;
+}
+
+img { 
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.headerNav {
+    background: $primary3;
+    width: 100%;
+    margin: 0;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.headerNav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.headerNav li,
+.socialNav li {
+    list-style-type: none;
+}
+
+.headerNav li {
+    padding: 0 2%;
+    margin: 0;
+}
+
+.headerNav a:hover,
+.headerNav a:focus {
+    color: $white;
+}
+
+.longButton {
+    width: 100%;
+    height: 2.5rem;
+    background: $black;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    margin-bottom: 4rem;
+}
+
+.longButton:hover,
+.longButton:focus {
+    background: $accent;
+}
+
+// footer styles
+footer {
+    background: $black;
+    width: 100%;
+    text-align: center;
+    padding: 0.5% 0;
+}

@@ -1,0 +1,375 @@
+// header styles
+.wrapper {
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.homeHeader {
+    height: 80vh;
+    background: $primary3;
+}
+
+.home a[href$="index.html"] {
+    color: $white;
+}
+
+.headerFlexContainer {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerImg {
+    margin: 1.5rem 2rem 0 0;
+    width: 40%;
+    box-shadow: 1rem 1rem 0 0 $white;
+}
+
+// can't seem to sort out how to keep the img beside the H1 with positioning, I thought I'd had it before diving into CSS/SCSS but alas I jumped ahead to other pages too hastily
+
+.heroLogo {
+    width: 60%;
+    align-self: center;
+    position: relative;
+}
+
+.logoImg {
+    width: 7rem;
+    position: absolute;
+    top: -65%;
+    right: 30%;
+}
+
+// about (who's harper) section styles
+.whosHarper {
+    background: $primary4;
+    margin: 0;
+}
+
+.whosHarperFlexContainer {
+    width: 50%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+.whosHarperFlexContainer h2 {
+    padding-bottom: 1rem;
+}
+
+.whosHarperFlexContainer p {
+    padding-bottom: 2rem;
+}
+
+.findButton {
+    background: $black;
+    padding: 0.5rem 2rem;
+}
+
+.findButton:hover,
+.findButton:focus {
+    background: $accent;
+    color: $black;
+}
+
+// links section styles
+.linksSection {
+    background: $primary4;
+    padding: 5% 0 5% 0;
+}
+
+.linksFlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.linksFlexChild {
+    width: 50%;
+    display: flex;
+}
+
+.fontAwesome {
+    margin-right: 1rem;
+}
+
+.fontAwesome i {
+    background: $primary3;
+    font-size: 1.6rem;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.65rem;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.linksFlexChild h3 {
+    padding-bottom: 1rem;
+}
+
+.linksFlexChild p {
+    margin-bottom: 2rem;
+}
+
+// blogLinks section styles
+// **PLZ NOTE - I could only get this section to work in my dev tools responsive mode by doing the most finicky things, it was a massive struggle so I'm looking forward to any and all feedback on how to style something like this!
+
+.blogSection {
+    background: $white;
+}
+
+.leftWrapper {
+    margin-left: auto; 
+    margin-right: 0;
+    max-width: 640px;
+    width: 80%;
+}
+
+.rightWrapper {
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 640px;
+    width: 80%;
+}
+
+.blogFlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.blogChild {
+    width: 40%;
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.blogImgLeftContainer {
+    background: $primary1;
+    position: relative;
+    top: -1.5rem;
+}
+
+.blogImgRightContainer {
+    background: $primary3;
+    position: relative;
+    bottom: -2rem;
+}
+
+.blogImgLeft {
+    position: relative;
+    top: -1rem;
+    right: 1rem;
+}
+
+.blogImgRight {
+    position: relative;
+    bottom: 1rem;
+    left: -1rem;
+}
+
+.blogTextRight,
+.blogTextLeft {
+    flex-direction: column;
+}
+
+.blogTextRight {
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    width: 90%;
+}
+
+.blogTextLeft {
+    margin-left: auto; 
+    margin-right: 0;
+    padding-right: 5rem;
+    padding-top: 1rem;
+    width: 90%;
+}
+
+.blogTextRight h3,
+.blogTextLeft h3 {
+    padding-bottom: 1.5rem;
+}
+
+.blogTextRight p,
+.blogTextLeft p {
+    padding-bottom: 2rem;
+}
+
+.readButton {
+    background: $black;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.blogTextRight .readButton {
+    align-self: flex-start;
+}
+
+.blogTextLeft .readButton {
+    align-self: flex-end;
+}
+
+.readButton:hover,
+.readButton:focus {
+    background: $accent;
+    color: $black;
+}
+
+// journey section styles
+.journeySection {
+    background: $primary4;
+    padding: 4rem 0 4rem 0;
+}
+
+.journeyFlexContainer {
+    display: flex;
+    align-items: center;
+
+}
+.journeyImgContainer {
+    width: 30%;
+    padding-right: 3.5rem;
+}
+
+.journeyImgContainer img {
+    box-shadow: 1rem 1rem 0 0 $primary1;
+}
+
+.journeyText {
+    width: 70%;
+}
+
+.journeyText h2 {
+    padding-bottom: 1rem;
+}
+
+.journeyText p {
+    padding-bottom: 3rem;
+}
+
+// img gallery styles
+.imgGallery {
+    background: $white;
+}
+
+.imgGalleryContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgGalleryContainer:first-child,
+.imgGalleryContainer:nth-child(2) {
+    margin-right: 0.5rem;
+}
+
+.imgGalleryChild {
+    padding: 4rem 0;
+    width: calc(100% / 3 - 1rem);
+}
+
+//media queries
+@media (max-width: 800px) {
+    .wrapper {
+        max-width: 800px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .homeHeader {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 700px) {
+    .headerImg {
+        display: none;
+    }
+
+    .homeHeader h1 {
+        position: absolute;
+        top: 20rem;
+    }
+
+    .heroLogo img {
+        display: none;
+    }
+
+    .whosHarper h2 {
+        margin-top: 2rem;
+    }
+
+    .whosHarperFlexContainer {
+        width: 100%;
+    }
+
+    .linksFlexContainer {
+        flex-direction: column;
+    }
+
+    .linksFlexChild {
+        width: 100%;
+    }
+
+    .blogChild {
+        width: 100%;
+    }
+
+    .journeyFlexContainer {
+        flex-direction: column;
+    }
+
+    .journeyImgContainer {
+        width: 80%;
+    }
+
+    .journeyText {
+        margin-top: 2rem;
+    }
+
+    .imgGalleryContainer {
+        flex-direction: column;
+    }
+
+    .imgGalleryChild {
+        width: 100%;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 580px) {
+    .wrapper {
+        max-width: 580px;
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .heroLogo h1 {
+        font-size: 5rem;
+        top: 19rem;
+    }
+
+    .whosHarper h2 {
+        margin-top: 3rem;
+    }
+
+    .bannerImgContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .findButton,
+    .readButton {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+
+
+
+    

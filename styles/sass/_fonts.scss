@@ -1,0 +1,96 @@
+// font-family variables
+$headingFont: 'Oswald', sans-serif;
+$bodyFont: 'Cabin', sans-serif;
+
+// color variables
+$accent: #F38D8D;
+$primary1: #227284;
+$primary2: #68B0C1;
+$primary3: #B9DDE7;
+$primary4: #F6F6F6;
+$black: #171717;
+$white: #FFF;
+
+
+h1,
+h2,
+h3,
+h4,
+a,
+.findButton,
+.readButton,
+.longButton,
+.headerNav li,
+.mobileNav li {
+    font-family: $headingFont;
+    letter-spacing: 0.05rem;
+    color: $black;
+    text-transform: uppercase;
+    color: $black;
+    margin: 0;
+}
+
+.findButton,
+.readButton,
+.longButton {
+    color: $white;
+}
+
+.headerNav li,
+.mobileNav li {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 4.6rem;
+    font-weight: 600;
+}
+
+.homeH1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 2.1rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+.findButton,
+.readButton,
+.longButton {
+    text-align: center;
+    line-height: 1.6px;
+    font-weight: 600;
+}
+
+.headerNav li {
+    line-height: 1.45rem;
+}
+
+p,
+.recent ul li {
+    font-family: $bodyFont;
+    line-height: 1.6;
+    letter-spacing: 0rem;
+    margin: 0;
+}
+
+input[placeholder],
+textarea[placeholder] {
+    font-family: $bodyFont;
+    color: $black;
+    padding-left: 1rem;
+    line-height: 1.6rem;
+}
+
+footer p {
+    color: $white;
+}

@@ -1,0 +1,208 @@
+// contact header styles
+.contactWrapper {
+    max-width: 1400px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contactHeader {
+    height: 50vh;
+    background-image: url(../assets/contact-image-1.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.contact a[href="contact.html"] {
+    color: $white;
+}
+
+.contactHeader h1 {
+    position: absolute;
+    bottom: -2rem;
+}
+
+.mobileNav {
+    padding-top: 0.5rem;
+    visibility: hidden;
+    display: none;
+    height: 1px;
+    width: 1px;
+}
+
+// contact main info
+.contactWrapper {
+    max-width: 1400px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+main {
+    background: $primary4;
+}
+
+.contactFlexContainer {
+    padding-top: 5rem;
+    display: flex;
+}
+
+.contactInfo {
+    background: $white;
+    margin: 0 2rem 2rem 0;
+    padding: 2rem;
+    width: calc(30% - 2rem);
+    height: 50%;
+}
+
+.socialNav ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.socialNav li {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+.socialNav ul li a {
+    color: $primary1;
+}
+
+.socialNav ul li a:hover,
+.socialNav ul li a:focus {
+    color: $accent;
+}
+
+.emailLink h4 {
+    text-transform: lowercase;
+    padding-bottom: 1rem;
+}
+
+.contactForm {
+    width: calc(70% - 2rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input[name="name"],
+input[name="email"],
+input[name="contactMessage"] {
+    border: none;
+}
+
+.contact input[name="name"] {
+    padding-right: 0.5rem;
+}
+
+.contact input[name="name"],
+.contact input[name="email"] {
+    width: calc(50% - 0.5rem);
+    height: 3rem;
+}
+
+textarea[name="contactMessage"] {
+    border: none;
+    width: 100%;
+    margin: 1rem 0;
+    resize: none;
+    overflow: hidden;
+    padding: 1rem 0 0 1rem;
+}
+
+// media queries
+@media (max-width: 1110px) {
+    .contactWrapper {
+        max-width: 1110px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .contactFlexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactInfo {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .socialNav {
+        width: 50%;
+    }
+
+    .socialNav ul {
+        width: auto;
+    }
+
+    .contactText {
+        text-align: center;
+        align-self: center;
+    }
+
+    .contactForm {
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .contactForm input[name="name"],
+    .contactForm input[name="email"] {
+    width: 100%;
+    height: 3rem;
+    }
+
+    input[name="name"] {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .contactWrapper {
+        max-width: 580px;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .contactHeader {
+        overflow: hidden;
+    }
+
+    .mobileNav {
+        height: auto;
+        width: 100%;
+        padding-left: 0;
+        visibility: visible;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contactHeader h1 {
+        top: 60%;
+    }
+
+    .contact .headerNav nav ul {
+        padding: 0;
+    }
+
+    .hide {
+        visibility: hidden;
+    }
+    
+    .socialNav {
+        width: 50%;
+    }
+}
+
+@media (max-width: 450px) {
+    .socialNav {
+        width: 100%;
+    }
+}
