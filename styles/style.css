@@ -788,7 +788,8 @@ main {
   border-bottom: 0.25rem solid #227284;
 }
 
-.blogPostEntry {
+.blogPostEntry,
+.userBlogEntry {
   background: #FFF;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -803,13 +804,15 @@ main {
 }
 
 .entryTwo,
-.entryThree {
+.entryThree,
+.userBlogEntry {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.entryImgContainer {
+.entryImgContainer,
+.userImg {
   margin-right: 1rem;
   width: calc(15% - 1rem);
   -webkit-box-flex: 1;
@@ -817,14 +820,16 @@ main {
           flex: 1 0 auto;
 }
 
-.entryText {
+.entryText,
+.userBlogPost {
   width: calc(85% - 1rem);
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
 }
 
-.entryText p {
+.entryText p,
+.userBlogPost p {
   margin: 0.5rem 0 0 0;
 }
 
